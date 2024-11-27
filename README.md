@@ -2,6 +2,6 @@
 vimrc and tmux
 
 ```
-ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -sf $(pwd)/vimrc ~/.vimrc
+ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 ```
