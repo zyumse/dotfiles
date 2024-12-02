@@ -28,8 +28,13 @@ call plug#end()
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l> 
 " set ls=2
-set clipboard=unnamedplus
-
+" set clipboard=unnamedplus " this is for linux 
+" set clipboard=unnamed " this is for mac
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 set completeopt=noinsert,menuone,noselect
 
 " set cursorline
@@ -69,3 +74,6 @@ hi Search ctermfg=Red
 set foldmethod=syntax
 set foldlevelstart=10
 set foldmethod=indent
+
+set backspace=indent,eol,start
+
