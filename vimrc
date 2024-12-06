@@ -8,7 +8,7 @@ let g:ale_fixers = {
 			\ }
 let g:ale_python_autopep8_options = '--max-line-length=100'
 let g:ale_python_flake8_options = '--max-line-length=100'
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 Plug 'davidhalter/jedi-vim'
 let g:jedi#show_call_signatures = 1
 let g:jedi#show_documentation_command = "<leader>k"
@@ -24,6 +24,9 @@ let g:airline#extensions#tabline#formatter = 'default'
 Plug 'github/copilot.vim'
 
 Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l> 
