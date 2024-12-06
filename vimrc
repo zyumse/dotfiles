@@ -24,6 +24,9 @@ let g:airline#extensions#tabline#formatter = 'default'
 Plug 'github/copilot.vim'
 
 Plug 'kien/ctrlp.vim'
+
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l> 
